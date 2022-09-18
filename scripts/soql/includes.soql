@@ -1,0 +1,3 @@
+SELECT Name, Pais__c, Gerente__r.Name
+  FROM Empleado__c
+  WHERE Pais__c INCLUDES ( 'Colombia' )
