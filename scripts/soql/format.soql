@@ -1,0 +1,3 @@
+SELECT FORMAT(Amount)monto, FORMAT(CreatedDate)fechaCreacion, Amount, CreatedDate
+ FROM Opportunity
+ WHERE Amount != NULL LIMIT 5

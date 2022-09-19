@@ -12,4 +12,17 @@ public with sharing class AdvancedQueries {
             System.debug('Empleado '+objEmpleado.Name+ ' con operaciones en: '+objEmpleado.Pais__c);
         }
     }
+
+    public static void query3(){
+        for (Opportunity variable : [SELECT FORMAT(Amount)monto, FORMAT(CreatedDate)fechaCreacion, Amount, CreatedDate
+        FROM Opportunity
+        WHERE Amount != NULL LIMIT 5]) {
+            String montoConvertido = (String)variable.get('monto');
+            String fechaConvertida = (String)variable.get('fechaCreacion');
+            System.debug('MONTO FORMAT '+'\n'+ montoConvertido+ ' VS '+variable.Account);
+            System.debug('MONTO FORMAT '+'\n'+ fechaConvertida+ ' VS '+variable.CreatedDate);
+            
+        }
+    }
+
 }

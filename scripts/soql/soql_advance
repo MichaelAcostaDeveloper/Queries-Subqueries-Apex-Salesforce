@@ -1,1 +1,0 @@
-SELECT Name, Gerente__r.Name, Pais__c FROM Empleado__c WHERE Pais__c INCLUDES('Colombia')
