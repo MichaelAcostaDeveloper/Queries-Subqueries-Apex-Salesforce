@@ -1,0 +1,17 @@
+SELECT Id, Name, Type, LastViewedDate, Profile.Name 
+          FROM RecentlyViewed 
+          ORDER BY LastViewedDate DESC
+
+SELECT Id, Name FROM Contact LIMIT 1 FOR VIEW
+
+SELECT Id, Name FROM Contact WHERE Id != '' LIMIT 10 FOR VIEW
+
+
+SELECT Industry FROM Account
+SELECT Count() FROM Account WHERE Name LIKE '%F' 
+
+
+SELECT Industry FROM Account
+SELECT Count_Distinct(Industry) FROM Account
+
+SELECT StageName, AVG(Amount) FROM Opportunity GROUP BY StageName
