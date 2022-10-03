@@ -8,7 +8,7 @@ SELECT Id, Name FROM Contact WHERE Id != '' LIMIT 10 FOR VIEW
 
 
 SELECT Industry FROM Account
-SELECT Count() FROM Account WHERE Name LIKE '%F' 
+SELECT Count() FROM Account WHERE Name LIKE '%F'
 
 
 SELECT Industry FROM Account

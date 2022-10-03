@@ -1,0 +1,17 @@
+FIND {Michael} RETURNING Gerente__c, Empleado__c
+FIND {mICHAEL} RETURNING Contact
+
+//objeto declarando campos
+FIND {mICHAEL} RETURNING Account(Name)
+FIND {mICHAEL} RETURNING Contact(FirstName, LastName)
+
+//LIMIT 
+FIND {mICHAEL} RETURNING Contact(FirstName, LastName LIMIT 3)
+FIND {mICHAEL} RETURNING Contact(FirstName, LastName LIMIT 3),Account(Name)
+FIND {cUENTA} RETURNING Contact(FirstName, LastName),Account(Name, Industry LIMIT 10)
+
+//ALL FIELDS
+FIND {mICHAEL} IN ALL FIELDS
+FINS {MICHAEL} IN NAME FIELDS
+FIND {mICHAEL} IN EMAIL FIELDS
+FIND {8989898} IN phone FIELDS
